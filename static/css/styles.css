@@ -19,7 +19,7 @@
 
 @media (max-width: 991px) {
 	.presentation {
-		background-image: url("../img/main.jpg");
+		background-image: url('/static/img/main.jpg');
 		background-repeat: no-repeat;
 		background-position: center;
 		height: 92vh;
@@ -38,7 +38,7 @@
 
 @media (min-width: 992px) {
 	.img-main {
-		background-image: url("../img/main.jpg");
+		background-image: url('/static/img/main.jpg');
 		background-repeat: no-repeat;
 		background-position: center;
 		height: 92vh;
@@ -63,7 +63,7 @@
 .but-main {
 	font-size: 20px;
 	font-weight: 700;
-	height: 70px;
+	height: 100px;
 	width: 175px;
 }
 

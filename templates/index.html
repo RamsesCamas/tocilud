@@ -1,9 +1,179 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static  %}
 {% block content%}
-    <h1><center>Este es el index</center></h1>
-    <h1>Que pasa cracks</h1>
-    <h2>Este cambio lo hizo Ramses</h2>
-    <h2>Este cambio lo hizo el Doctor Carlos</h2>
+<style>
+    @media (max-width: 575px) {
+        .img-service {
+            height: 200px;
+        }
+        .p-service-left, .p-service-right {
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .img-service {
+            height: 225px;
+        }
+        .p-service-left, .p-service-right {
+            text-align: center;
+            padding: 20px 5px 20px 5px;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .presentation {
+            background-image: url("{% static 'img/main.jpg'%}");
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 92vh;
+        }
+        .img-main {
+            background-image: none;
+        }
+        .img-service {
+            height: 250px;
+        }
+        .p-service-left, .p-service-right {
+            text-align: left;
+            padding: 20px 5px 20px 5px;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .img-main {
+            background-image: url("{% static 'img/main.jpg'%}");
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 92vh;
+        }
+        .p-service-left {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 50px;
+        }
+    
+    .p-service-right {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 50px;
+    }
+    }
+    
+    .subtitle {
+        padding-bottom: 75px;
+    }
+    
+    .but-main {
+        font-size: 20px;
+        font-weight: 700;
+        height: 70px;
+        width: 175px;
+    }
+    
+    .img-service {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+</style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">TociLud</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sección 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sección 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sección 3</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-{% endblock %}
+  <!-- Main section -->
+  <div class="container-fluid presentation">
+
+    <div class="row d-flex align-items-center">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <h1 class="font-weight-bold display-1 text-center">TociLud</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <h2 class="text-center text-muted subtitle">Servicio de Telemedicina</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <h2 class="text-center">Soy</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary rounded-pill but-main">Paciente</button>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary rounded-pill but-main">Médico</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col img-main">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Services -->
+  <div class="container-fluid services">
+
+    <div class="row d-flex align-items-center bg-warning">
+      <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12">
+        <img src="{% static 'img/Imagen5.jpg' %}" alt="" class="img-fluid img-service rounded mx-auto d-block">
+      </div>
+      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+        <h1 class="font-weight-bold text-center text-dark">Recomendaciones</h1>
+      </div>
+      <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
+        <p class="h4 p-service-right">Debido a la situación sanitaria que estamos viviendo, en este apartado podrás encontrar algunas recomendaciones para prevenir el contagio del COVID-19.</p>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light">
+      <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
+        <p class="h4 p-service-left">Aquí podrás agendar una cita para recibir una consulta médica.</p>
+      </div>
+      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+        <h1 class="font-weight-bold text-center text-dark">Consultas programadas</h1>
+      </div>
+      <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12">
+        <img src="{% static 'img/Imagen6.png' %}" alt="" class="img-fluid img-service rounded mx-auto d-block">
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-primary">
+      <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12">
+        <img src="{% static 'img/Imagen7.png' %}" alt="" class="img-fluid img-service rounded mx-auto d-block">
+      </div>
+      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+        <h1 class="font-weight-bold text-center text-dark">Video consultas</h1>
+      </div>
+      <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
+        <p class="h4 p-service-right">Este apartado te permitirá tener contacto en vivo con un médico para atenderte en una consulta desde la seguridad de tu hogar.</p>
+      </div>
+    </div>
+
+  </div>
+  {% endblock %}

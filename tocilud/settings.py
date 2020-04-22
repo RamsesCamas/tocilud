@@ -56,7 +56,10 @@ ROOT_URLCONF = 'tocilud.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [
+        os.path.join(BASE_DIR, 'calendar/build'),
+        'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

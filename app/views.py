@@ -6,4 +6,7 @@ from django.http import JsonResponse, HttpResponse, HttpRequest, HttpResponseRed
 import sweetify
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    return render(request,'index2.html')
+
+def calendar(request):
+    return render(request, 'index.html')

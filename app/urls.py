@@ -7,5 +7,5 @@ from django.urls import path, re_path
 
 urlpatterns = [
     path('',views.index),
-    path('calendar',views.calendar),
+    path('cita',views.calendar),
 ]

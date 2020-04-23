@@ -16,10 +16,16 @@ class App extends Component {
   }
   alertDate = () =>{
     alert(this.state.date);
+    
   }
   render(){
     return (
+      
       <div className="App">
+        
+        <br></br>
+        <br></br>
+        <br></br>
         <SingleDatePicker
           date={this.state.date} // momentPropTypes.momentObj or null
           onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
@@ -27,7 +33,6 @@ class App extends Component {
           onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
           id="your_unique_id" // PropTypes.string.isRequired,
         />
-        <br></br>
         <br></br>
         <button onClick={this.alertDate}>Click para saber la fecha</button>
       </div>

@@ -1,179 +1,214 @@
 {% extends 'base.html' %}
 {% load static  %}
 {% block content%}
-<style>
-    @media (max-width: 575px) {
-        .img-service {
-            height: 200px;
-        }
-        .p-service-left, .p-service-right {
-            text-align: center;
-        }
-    }
-    
-    @media (max-width: 767px) {
-        .img-service {
-            height: 225px;
-        }
-        .p-service-left, .p-service-right {
-            text-align: center;
-            padding: 20px 5px 20px 5px;
-        }
-    }
-    
-    @media (max-width: 991px) {
-        .presentation {
-            background-image: url("{% static 'img/main.jpg'%}");
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 92vh;
-        }
-        .img-main {
-            background-image: none;
-        }
-        .img-service {
-            height: 250px;
-        }
-        .p-service-left, .p-service-right {
-            text-align: left;
-            padding: 20px 5px 20px 5px;
-        }
-    }
-    
-    @media (min-width: 992px) {
-        .img-main {
-            background-image: url("{% static 'img/main.jpg'%}");
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 92vh;
-        }
-        .p-service-left {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-left: 50px;
-        }
-    
-    .p-service-right {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        padding-right: 50px;
-    }
-    }
-    
-    .subtitle {
-        padding-bottom: 75px;
-    }
-    
-    .but-main {
-        font-size: 20px;
-        font-weight: 700;
-        height: 70px;
-        width: 175px;
-    }
-    
-    .img-service {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-</style>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">TociLud</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="cita">Programar Cita</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sección 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sección 3</a>
-        </li>
-      </ul>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top shadow d-xl-flex" style="background-color: #0c1c47;">
+        <div class="container"><a class="navbar-brand text-light" href="index.html" style="color: #eb0b0b;filter: blur(0px);font-weight: 600;padding: 10px;font-style: normal;font-size: 28px;"><i class="fas fa-heartbeat" style="padding: 0px 10px;color: #d81e05;"></i>TociLud</a>
+            <button
+                data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-sm-center justify-content-md-end justify-content-lg-end justify-content-xl-end"
+                    id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"
+                            role="presentation"><i class="fas fa-search d-lg-flex justify-content-lg-end" style="color: #ffffff;margin-right: 10px;"></i><input class="bg-light border rounded border-primary shadow" type="search" placeholder=" buscar"></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+<div class="container-fluid text-center">
+        <div class="row no-gutters d-sm-flex align-items-sm-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-table align-self-center">
+                <div class="row no-gutters">
+                    <div class="col-12 text-center d-flex justify-content-center align-items-center" style="margin-top: 15px;">
+                        <h1 class="display-1 text-break text-center text-sm-center text-md-center text-lg-center text-xl-center text-body" style="font-weight: bold;color: #ffffff;">TociLud</h1>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 text-center d-flex justify-content-center align-items-center">
+                        <h2 class="text-center text-body" style="color: #02283a;">Servicio de Telemedicina</h2>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col" style="padding: 30px  15px 5px;">
+                        <h2 class="text-center text-dark">Soy</h2>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-6 text-center" style="margin-bottom: 10px;"><button class="btn btn-primary btn-lg border rounded" type="button" style="height: 60px;width: 170px;font-weight: bold;padding: 8px;filter: blur(0px) brightness(92%) contrast(200%) grayscale(0%) hue-rotate(0deg) invert(0%) sepia(0%);background-color: #00667f;" data-toggle="modal" data-target="#loginModal1">Paciente</button>
+                        <div
+                            class="modal fade" role="dialog" tabindex="-1" id="loginModal1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body" style="background-color: #4066a0;padding: 10px;">
+                                        <form style="background-color: #f1f7fc;">
+                                            <div class="d-xl-flex justify-content-xl-center align-items-xl-center"><img class="img-fluid border rounded-circle shadow" src="{% static 'img/avatar.png' %}" width="120px" style="margin: 20px 0px;"></div>
+                                            <div class="form-group" style="margin: 0px 40px 16px;"><input class="form-control d-xl-flex" type="email" name="Email" placeholder="Email" inputmode="email"></div>
+                                            <div class="form-group" style="margin: 0px 40px 16px;"><input class="form-control" type="password" name="Password" placeholder="Contraseña"></div>
+                                            <div class="form-group" style="margin: 0px 40px 16px;">
+                                                <div class="form-check d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-start justify-content-sm-start justify-content-md-start justify-content-lg-start justify-content-xl-start"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Recordar cuenta</label></div>
+                                            </div>
+                                            <div class="form-group d-xl-flex justify-content-xl-center align-items-xl-center"><button class="btn btn-primary" type="button">Iniciar sesión</button></div><a class="d-flex d-xl-flex justify-content-center justify-content-xl-center align-items-xl-center" href="#">¿Olvidaste tu email o tu contraseña?</a>
+                                            <p
+                                                class="d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" style="padding-bottom: 30px;margin: 0px;">¿No tienes una cuenta?&nbsp;<a class="d-flex d-xl-flex justify-content-center justify-content-xl-center align-items-xl-center" href="#">Registrate</a></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 text-center" style="margin-bottom: 10px;"><button class="btn btn-primary btn-lg border rounded" type="button" style="font-weight: bold;font-style: normal;width: 170px;height: 60px;padding: 8px;filter: brightness(92%) contrast(200%);background-color: #00667f;" data-toggle="modal" data-target="#loginModal2">Médico</button>
+                  <div
+                      class="modal fade" role="dialog" tabindex="-1" id="loginModal2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                              <div class="modal-body" style="background-color: #224170;padding: 10px;">
+                                  <form style="background-color: #f1f7fc;">
+                                      <div class="d-xl-flex justify-content-xl-center align-items-xl-center"><img class="img-fluid border rounded-circle shadow" src="{% static 'img/avatar2.png' %}" width="120px" style="margin: 20px 0px;"></div>
+                                      <div class="form-group" style="margin: 0px 40px 16px;"><input class="form-control d-xl-flex" type="email" name="Email" placeholder="Email" inputmode="email"></div>
+                                      <div class="form-group" style="margin: 0px 40px 16px;"><input class="form-control" type="password" name="Password" placeholder="Contraseña"></div>
+                                      <div class="form-group" style="margin: 0px 40px 16px;">
+                                          <div class="form-check d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-start justify-content-sm-start justify-content-md-start justify-content-lg-start justify-content-xl-start"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Recordar cuenta</label></div>
+                                      </div>
+                                      <div class="form-group d-xl-flex justify-content-xl-center align-items-xl-center"><button class="btn btn-primary" type="button">Iniciar sesión</button></div><a class="d-flex d-xl-flex justify-content-center justify-content-xl-center align-items-xl-center" href="#">¿Olvidaste tu email o tu contraseña?</a>
+                                      <p
+                                          class="d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center" style="padding-bottom: 30px;margin: 0px;">¿No tienes una cuenta?&nbsp;<a class="d-flex d-xl-flex justify-content-center justify-content-xl-center align-items-xl-center" href="#">Registrate</a></p>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex d-sm-flex d-md-flex d-lg-flex justify-content-center align-items-center align-items-sm-center align-items-md-center" style="max-height: 90vh;min-height: 0px;height: 89vh;"><img class="img-fluid d-sm-flex justify-content-sm-center align-items-sm-center" src="{% static 'img/main.jpg' %}" style="filter: brightness(113%) contrast(124%) saturate(171%);"></div>
     </div>
-  </nav>
+    </div>
 
-  <!-- Main section -->
-  <div class="container-fluid presentation">
-
-    <div class="row d-flex align-items-center">
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-        <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <h1 class="font-weight-bold display-1 text-center">TociLud</h1>
+    <div class="container-fluid">
+      <div
+        class="row d-md-flex d-lg-flex justify-content-center justify-content-md-center align-items-md-start justify-content-lg-center align-items-lg-center"
+        style="background-color: #605677;height: auto;">
+        <div
+          class="col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex d-sm-flex d-md-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-xl-center align-items-xl-center"
+          style="height: auto;min-height: 0px;"><img class="rounded-circle img-fluid shadow d-xl-flex"
+            src="{% static 'img/Imagen5.jpg' %}"
+            style="margin: 16px;width: 200px;height: 200px;filter: blur(0px) brightness(104%) contrast(92%) grayscale(0%) saturate(101%);">
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-5 col-xl-4 text-sm-center text-md-center text-lg-center d-sm-flex d-md-flex d-lg-flex d-xl-flex align-self-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-start align-items-xl-center"
+          style="padding: 0px;height: auto;min-height: 0px;">
+          <div class="row no-gutters d-xl-flex">
+            <div class="col-12 text-center d-flex justify-content-center justify-content-lg-start justify-content-xl-start"
+              style="margin-bottom: 10px;">
+              <h1
+                class="text-break text-center text-sm-center text-md-center text-lg-center text-xl-left d-sm-flex justify-content-sm-center"
+                style="margin-bottom: 0px;color: #ffffff;"><strong>Recomendaciones</strong><br></h1>
+            </div>
+            <div
+              class="col-12 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-start justify-content-xl-start">
+              <div class="dropdown d-sm-flex"><button
+                  class="btn btn-primary dropdown-toggle border rounded border-dark shadow d-sm-flex align-items-sm-center"
+                  data-toggle="dropdown" aria-expanded="false" type="button"
+                  style="font-weight: 500;font-size: 22px;background-color: #754760;">Más Información</button>
+                <div class="dropdown-menu border rounded shadow" role="menu"><a class="dropdown-item" role="presentation"
+                    href="Recomendaciones.html" style="font-weight: 500;font-size: 17px;" target="_blank"><i
+                      class="fas fa-child"></i>&nbsp; Para la <strong>población</strong></a><a class="dropdown-item"
+                    role="presentation" href="#" style="font-weight: 500;font-size: 17px;"><i
+                      class="fas fa-user-md"></i>&nbsp;&nbsp;Para <strong>personal de salud</strong></a></div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <h2 class="text-center text-muted subtitle">Servicio de Telemedicina</h2>
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3 col-xl-4 text-sm-center d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center"
+          style="margin-right: 0px;padding-left: 0px;padding-right: 0px;height: auto;min-height: 0px;">
+          <p class="lead text-center text-sm-center text-md-left text-lg-left text-xl-left"
+            style="font-weight: 500;margin-bottom: 0px;padding-right: 0px;color: #e5d3cc;"><br>Debido a la situación
+            sanitaria que estamos viviendo, en este apartado podrás encontrar algunas recomendaciones para prevenir el
+            contagio del COVID-19.<br><br></p>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center" style="background-color: #fefefe;height: auto;">
+        <div
+          class="col-11 col-sm-11 col-md-6 col-lg-4 col-xl-4 text-center text-sm-center d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-end align-items-xl-center"
+          style="padding-right: 0px;padding-left: 0px;height: auto;min-height: 0px;">
+          <p class="lead text-lg-right text-xl-right" style="font-weight: 500;padding-left: 0px;margin-bottom: 0px;">
+            <br>Aquí podrás agendar una cita para recibir una consulta médica.<br></p>
+        </div>
+        <div
+          class="col-sm-12 col-md-5 col-lg-4 col-xl-4 text-center text-sm-center d-flex d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center"
+          style="height: auto;min-height: 0px;">
+          <div class="row">
+            <div class="col-12 text-center d-flex d-sm-flex justify-content-center justify-content-sm-center"
+              style="margin-top: 30px;">
+              <h1 class="text-md-center text-lg-right text-xl-right d-xl-flex"><strong>Consultas programadas</strong><br>
+              </h1>
+            </div>
+            <div
+              class="col-12 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end justify-content-xl-end align-items-xl-center">
+              <a class="btn btn-danger text-white border rounded border-danger shadow d-xl-flex" role="button"
+                target="_blank" style="font-size: 22px;font-weight: 500;" href="cita">Más Información</a></div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <h2 class="text-center">Soy</h2>
+        <div
+          class="col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex d-sm-flex d-md-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-xl-center align-items-xl-center"
+          style="height: auto;min-height: 0px;"><img class="img-fluid" src="{% static 'img/Imagen6.png' %}"
+            style="margin: 16px;width: 200px;height: 200px;"></div>
+      </div>
+      <div
+        class="row d-md-flex d-lg-flex justify-content-center align-items-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center"
+        style="background-color: #f2ed6d;height: auto;max-height: none;">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex d-sm-flex d-md-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-xl-center align-items-xl-center"
+          style="height: auto;padding: 0px;min-height: 0px;"><img class="rounded-circle img-fluid shadow d-xl-flex"
+            src="{% static 'img/Imagen7.png' %}"
+            style="margin: 16px;width: 200px;height: 200px;filter: blur(0px) brightness(92%) contrast(92%);"></div>
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex d-sm-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center"
+          style="height: auto;min-height: 0px;">
+          <div class="row">
+            <div class="col-12 text-center d-flex justify-content-center justify-content-xl-start">
+              <h1 class="text-md-center text-lg-left text-xl-left d-sm-flex justify-content-sm-center">
+                <strong>Videoconsultas</strong><br></h1>
+            </div>
+            <div
+              class="col-12 d-flex d-sm-flex d-md-flex d-lg-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-start">
+              <a class="btn btn-warning text-white border rounded border-warning shadow" role="button"
+                style="font-size: 22px;font-weight: 500;background-color: #f5be1a;" target="_blank">Más Información</a>
+            </div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center">
-            <button type="button" class="btn btn-primary rounded-pill but-main">Paciente</button>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center">
-            <button type="button" class="btn btn-primary rounded-pill but-main">Médico</button>
-          </div>
+        <div
+          class="col-12 col-sm-11 col-md-5 col-lg-4 col-xl-4 text-center text-sm-center d-sm-flex d-xl-flex justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center">
+          <p class="lead text-center text-sm-center text-md-left text-lg-left text-xl-left"
+            style="font-weight: 500;padding-right: 0px;margin-bottom: 0px;"><br>Este apartado te permitirá tener contacto en
+            vivo con un médico para atenderte en una consulta desde la seguridad de tu hogar.<br><br></p>
         </div>
-
-      </div>
-
-      <div class="col-xl-6 col-lg-6 col img-main">
       </div>
     </div>
-
-  </div>
-
-  <!-- Services -->
-  <div class="container-fluid services">
-
-    <div class="row d-flex align-items-center bg-warning">
-      <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12">
-        <img src="{% static 'img/Imagen5.jpg' %}" alt="" class="img-fluid img-service rounded mx-auto d-block">
-      </div>
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
-        <h1 class="font-weight-bold text-center text-dark">Recomendaciones</h1>
-      </div>
-      <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
-        <p class="h4 p-service-right">Debido a la situación sanitaria que estamos viviendo, en este apartado podrás encontrar algunas recomendaciones para prevenir el contagio del COVID-19.</p>
-      </div>
+  
+  <footer style="background-color: #00305e;">
+    <div class="container">
+        <div class="row no-gutters justify-content-center" style="padding-top: 50px;margin-right: 0px;">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-5 col-xl-5 text-left text-light" style="padding-right: 15px;">
+                <p class="lead text-left" style="font-size: 20px;color: rgba(248,249,250,0.75);">TociLud es un servicio de telemedicina independiente. Nuestra misión es apoyar a las familias mexicanas en el ámbito de la salud a través de consultas médicas a distancia.</p>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-3 text-left text-light" style="margin-bottom: 20px;">
+                <h2 class="text-uppercase text-left text-light" style="font-size: 20px;font-weight: 700;margin-bottom: 25px;">Acerca de<br /></h2><a class="text-left text-light" href="#" style="font-size: 20px;" target="_blank">TociLud<br /></a><a class="text-left text-light" href="#" style="font-size: 20px;" target="_blank">Nuestro equipo</a></div>
+            <div class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-4 text-left text-light">
+                <h2 class="text-uppercase text-left text-light" style="font-size: 20px;font-weight: 700;margin-bottom: 25px;">Contacto<br /></h2>
+                <h2 class="text-left" style="font-size: 20px;font-weight: 400;"><i class="fas fa-envelope"></i>  tocilud@gmail.com</h2>
+            </div>
+        </div>
+        <div class="row no-gutters text-center">
+            <div class="col-12 text-light d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"
+                style="font-size: 25px;letter-spacing: 50px;margin: 25px 0px;"><a class="text-center text-light d-flex" href="#" target="_blank"><i class="fab fa-facebook-f d-flex justify-content-center align-items-center"></i></a><a class="text-center text-light" href="#"><i class="fab fa-twitter d-flex justify-content-center align-items-center"></i></a>
+                <a
+                    class="text-center text-light" href="#"><i class="fab fa-instagram d-flex justify-content-center align-items-center"></i></a><a class="text-center text-light" href="#"><i class="fab fa-youtube d-flex justify-content-center align-items-center"></i></a></div>
+        </div>
     </div>
+  </footer>
 
-    <div class="row d-flex align-items-center bg-light">
-      <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
-        <p class="h4 p-service-left">Aquí podrás agendar una cita para recibir una consulta médica.</p>
-      </div>
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
-        <h1 class="font-weight-bold text-center text-dark">Consultas programadas</h1>
-      </div>
-      <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12">
-        <img src="{% static 'img/Imagen6.png' %}" alt="" class="img-fluid img-service rounded mx-auto d-block">
-      </div>
-    </div>
-
-    <div class="row d-flex align-items-center bg-primary">
-      <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12">
-        <img src="{% static 'img/Imagen7.png' %}" alt="" class="img-fluid img-service rounded mx-auto d-block">
-      </div>
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
-        <h1 class="font-weight-bold text-center text-dark">Video consultas</h1>
-      </div>
-      <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
-        <p class="h4 p-service-right">Este apartado te permitirá tener contacto en vivo con un médico para atenderte en una consulta desde la seguridad de tu hogar.</p>
-      </div>
-    </div>
-
-  </div>
   {% endblock %}

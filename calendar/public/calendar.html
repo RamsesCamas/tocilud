@@ -24,11 +24,50 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>TociLud</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3072f699a7.js" crossorigin="anonymous"></script>
+    <title>Consultas</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top shadow d-xl-flex" style="background-color: #3886ff;">
+      <div class="container"><a class="navbar-brand text-light" href="#"
+          style="color: #eb0b0b;filter: blur(0px);font-weight: 600;padding: 10px;font-style: normal;font-size: 28px;"><i
+            class="fas fa-heartbeat" style="padding: 0px 10px;color: #d81e05;"></i>TociLud</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+            navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div
+          class="collapse navbar-collapse d-lg-flex justify-content-sm-center justify-content-md-end justify-content-lg-end justify-content-xl-end"
+          id="navcol-1">
+          <ul class="nav navbar-nav">
+            <li
+              class="nav-item d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"
+              role="presentation"><i class="fas fa-search d-lg-flex justify-content-lg-end" style="color: #ffffff;"></i>
+              <h1 style="font-size: 18px;color: rgba(255,255,255,0);"> ..</h1><input
+                class="bg-light border rounded border-primary shadow" type="search" placeholder=" buscar" value=" " />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center" style="margin-top: 30px;">
+              <h1 class="display-4">CONSULTAS</h1><img class="img-fluid border rounded-circle shadow" src="https://image.freepik.com/vector-gratis/diseno-fondo-medico_1212-116.jpg" width="160px" /></div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="  margin: 30px 0px;">
+              <h3 class="text-uppercase text-center text-body" style="font-size: 24px; font-weight:bold;">Consultas programadas</h3>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="margin: 30px 0px;">
+              <h3 class="text-uppercase text-center text-body" style="font-size: 24px; margin-bottom: 30px; font-weight:bold;">Programar una cita</h3>
+
+              <noscript>You need to enable JavaScript to run this app.</noscript>
+              <div id="root"></div>
+
+            </div>
+          </div>
+        </div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +78,30 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <footer style="background-color: #00305e;">
+      <div class="container">
+          <div class="row no-gutters justify-content-center" style="padding-top: 50px;margin-right: 0px;">
+              <div class="col-12 col-sm-12 col-md-4 col-lg-5 col-xl-5 text-left text-light" style="padding-right: 15px;">
+                  <p class="lead text-left" style="font-size: 20px;color: rgba(248,249,250,0.75);">TociLud es un servicio de telemedicina independiente. Nuestra misión es apoyar a las familias mexicanas en el ámbito de la salud a través de consultas médicas a distancia.</p>
+              </div>
+              <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-3 text-left text-light" style="margin-bottom: 20px;">
+                  <h2 class="text-uppercase text-left text-light" style="font-size: 20px;font-weight: 700;margin-bottom: 25px;">Acerca de<br /></h2><a class="text-left text-light" href="#" style="font-size: 20px;" target="_blank">TociLud<br /></a><a class="text-left text-light" href="#" style="font-size: 20px;" target="_blank">Nuestro equipo</a></div>
+              <div class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-4 text-left text-light">
+                  <h2 class="text-uppercase text-left text-light" style="font-size: 20px;font-weight: 700;margin-bottom: 25px;">Contacto<br /></h2>
+                  <h2 class="text-left" style="font-size: 20px;font-weight: 400;"><i class="fas fa-envelope"></i>  tocilud@gmail.com</h2>
+              </div>
+          </div>
+          <div class="row no-gutters text-center">
+              <div class="col-12 text-light d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"
+                  style="font-size: 25px;letter-spacing: 50px;margin: 25px 0px;"><a class="text-center text-light d-flex" href="#" target="_blank"><i class="fab fa-facebook-f d-flex justify-content-center align-items-center"></i></a><a class="text-center text-light" href="#"><i class="fab fa-twitter d-flex justify-content-center align-items-center"></i></a>
+                  <a class="text-center text-light" href="#"><i class="fab fa-instagram d-flex justify-content-center align-items-center"></i></a><a class="text-center text-light" href="#"><i class="fab fa-youtube d-flex justify-content-center align-items-center"></i></a></div>
+          </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -8,4 +8,5 @@ from django.urls import path, re_path
 urlpatterns = [
     path('',views.index),
     path('cita',views.calendar),
+    path('recomendar',views.recomendar),
 ]

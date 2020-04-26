@@ -10,3 +10,6 @@ def index(request):
 
 def calendar(request):
     return render(request, 'calendar.html')
+
+def recomendar(request):
+    return render(request, 'Recomendaciones.html')

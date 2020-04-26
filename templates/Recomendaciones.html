@@ -4,7 +4,7 @@
 
 <body style="color: #ed72aa;background-color: #681e5b;">
     <nav class="navbar navbar-dark navbar-expand-md sticky-top shadow d-xl-flex" style="background-color: #3886ff;">
-        <div class="container"><a class="navbar-brand text-light" href="#" style="color: #eb0b0b;filter: blur(0px);font-weight: 600;padding: 10px;font-style: normal;font-size: 28px;"><i class="fas fa-heartbeat" style="padding: 0px 10px;color: #d81e05;"></i>TociLud</a>
+        <div class="container"><a class="navbar-brand text-light" href="/" style="color: #eb0b0b;filter: blur(0px);font-weight: 600;padding: 10px;font-style: normal;font-size: 28px;"><i class="fas fa-heartbeat" style="padding: 0px 10px;color: #d81e05;"></i>TociLud</a>
             <button
                 data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse d-lg-flex justify-content-sm-center justify-content-md-end justify-content-lg-end justify-content-xl-end"
@@ -23,7 +23,7 @@
             <div class="col-auto col-sm-10 col-md-7 col-lg-8 col-xl-8 d-sm-flex">
                 <h1 class="text-center" style="color: #FAFAFA;"><strong>Recomendaciones para prevenir el contagio del Covid-19</strong><br></h1>
             </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-2 d-flex d-sm-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center"><img class="img-fluid" src="assets/img/covid.png"></div>
+            <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-2 d-flex d-sm-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center"><img class="img-fluid" src="{% static 'img/covid.png'%}"></div>
         </div>
         <div class="row d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"
             style="margin-bottom: 60px;">
@@ -32,31 +32,31 @@
             </div>
         </div>
         <div class="row projects">
-            <div class="col-sm-6 col-lg-4 text-center item"><img class="img-fluid" src="assets/img/1.jpg" style="background-image: url(&quot;assets/img/1.jpg&quot;);height: 208px;width: auto;background-repeat: no-repeat;background-position: center;">
+            <div class="col-sm-6 col-lg-4 text-center item"><img class="img-fluid" src="{% static 'img/1.jpg' %}" style="background-image: url({%static 'img/1.jpg'%});height: 208px;width: auto;background-repeat: no-repeat;background-position: center;">
                 <h3 class="text-center name" style="color: #cce2dd;margin: 20px 0px;">1. Ropa y accesorios.</h3>
                 <p class="text-center description" style="color: #f7c4d8;font-family: Arial;">Si tuviste que salir de casa, al regresar, evita tener contacto con personas y objetos dentro de ella, debes darte un baño inmediatamente. La ropa que utilizaste, debes lavarla y no juntarla con otras prendas. Ponla a secar al aire libre.
                     También, evita utlizar accesorios al salir, como aretes, relojes, anillos, etc. Si&nbsp; utlizaste el celular, asegúrate de desinfectarlo muy bien con un paño y un poco de alcohol.</p>
             </div>
-            <div class="col-sm-6 col-lg-4 text-center item"><img class="img-fluid" src="assets/img/1.png" style="background-image: url(&quot;assets/img/1.png&quot;);width: auto;height: 208px;background-size: contain;background-repeat: no-repeat;background-position: center;">
+            <div class="col-sm-6 col-lg-4 text-center item"><img class="img-fluid" src="{% static 'img/1.png' %}" style="background-image: url();width: auto;height: 208px;background-size: contain;background-repeat: no-repeat;background-position: center;">
                 <h3 class="text-center name"
                     style="color: #cce2dd;margin: 20px 0px;">2. Comer saludable.</h3>
                 <p class="text-center description" style="color: #f7c4d8;font-family: Arial;">Mantente comiendo saludable. Consume frutas y verduras en abundacia, esto permitirá a tu cuerpo recibir los nutrientes que necesita para ayudarte a estar sano y tengas defensas fuertes.</p>
             </div>
-            <div class="col-sm-6 col-lg-4 text-center item"><img class="rounded-circle img-fluid" src="assets/img/3.jpg" style="background-image: url(&quot;assets/img/1.jpg&quot;);height: 208px;width: auto;background-repeat: no-repeat;background-position: center;">
+            <div class="col-sm-6 col-lg-4 text-center item"><img class="rounded-circle img-fluid" src="{%static 'img/3.jpg'%}" style="background-image: url({%static 'img/1.jpg'%});height: 208px;width: auto;background-repeat: no-repeat;background-position: center;">
                 <h3 class="text-center name" style="color: #cce2dd;margin: 20px 0px;">3. Beber agua.</h3>
                 <p class="text-center description" style="color: #f7c4d8;font-family: Arial;">Debes mantener a tu cuerpo hidratado, bebe al menos 2 litros de agua diariamente.<br></p>
             </div>
-            <div class="col-sm-6 col-lg-4 text-center item"><img class="rounded-circle img-fluid" src="assets/img/5.jpg" style="background-image: url(&quot;assets/img/1.jpg&quot;);height: 208px;width: auto;">
+            <div class="col-sm-6 col-lg-4 text-center item"><img class="rounded-circle img-fluid" src="{%static 'img/5.jpg'%}" style="background-image: url({%static 'img/1.jpg'%});height: 208px;width: auto;">
                 <h3 class="text-center name" style="color: #cce2dd;margin: 20px 0px;">4. Compras.</h3>
                 <p class="text-center description" style="color: #f7c4d8;font-family: Arial;">Evita caer en las "compras de pánico", ya que esto puede provocar desabastos. Haz compras de rutina, es decir, solo lo necesario. Si es posible, realiza tus compras en línea desde casa. Cuando tengas tus productos, utiliza un paño húmedo
                     con agua y cloro y limpia los productos antes de guardarlos.</p>
             </div>
-            <div class="col-sm-6 col-lg-4 text-center item"><img class="rounded-circle img-fluid" src="assets/img/Imagen5.jpg" style="background-image: url(&quot;assets/img/1.jpg&quot;);height: 208px;width: auto;">
+            <div class="col-sm-6 col-lg-4 text-center item"><img class="rounded-circle img-fluid" src="{%static 'img/Imagen5.jpg'%}" style="background-image: url({%static 'img/1.jpg'%});height: 208px;width: auto;">
                 <h3 class="text-center name" style="color: #cce2dd;margin: 20px 0px;">5. Otros padecimientos.</h3>
                 <p class="text-center description" style="color: #f7c4d8;font-family: Arial;">Evita ir a consultas médicas o centros de salud, a menos que sea urgente, pues esto permitirá que los centros de salud se encarguen de atender a los pacientes con Covid 19. Si necesitas de tratamientos especiales que requieran que asistas
                     a un hospital, o centro de salud, ponte en contacto primero con tu médico o solicita información al lugar sobre cómo se llevarán a cabo tus citas.</p>
             </div>
-            <div class="col-sm-6 col-lg-4 text-center item"><img class="img-fluid" src="assets/img/6.png" style="background-image: url(&quot;assets/img/1.jpg&quot;);height: 208px;width: auto;background-repeat: no-repeat;background-position: center;">
+            <div class="col-sm-6 col-lg-4 text-center item"><img class="img-fluid" src="{%static 'img/6.png'%}" style="background-image: url({%static 'img/1.jpg'%});height: 208px;width: auto;background-repeat: no-repeat;background-position: center;">
                 <h3 class="text-center name" style="color: #cce2dd;margin: 20px 0px;">6. Educación y Trabajo en línea.</h3>
                 <p class="text-center description" style="color: #f7c4d8;font-family: Arial;">Manten contacto continuo con tus profesores, alumnos, empleados o superiores de tu empleo, ya que te informarán todo lo que debes hacer para no tener pérdidas que los perjudiquen. También, organiza tus horarios respetando la rutina, esto
                     evitará que tengas distracciones o te pierdas las sesiones en línea.</p>
